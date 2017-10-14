@@ -44,7 +44,7 @@
 }
 
 .user-motto{
-  padding-bottom: 70rpx;
+  padding-bottom: 30rpx;
   font-family: "Palatino-Roman", serif;
   font-size: 18px;
   color: #404040;
