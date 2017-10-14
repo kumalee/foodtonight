@@ -1,0 +1,61 @@
+<!--game.wxml-->
+<view class="container">
+  <text class="mindrelax">
+    {{mindrelax}}
+  </text>
+  <text class="mindfeel">
+    {{mindfeel}}
+  </text>
+  <view class="section-action">
+    <view class="play-again" bindtap="bindToGame">
+      <view class="play-back">
+        <image class="triangle-left" mode="aspectFit" src="../resources/triangle-left.png"></image>
+      </view>
+      <text class="action-text">{{playagain}}</text>
+    </view>
+    <view class="share">
+      <button class="share-back" open-type="share">
+        <image class="sendto" mode="aspectFit" src="../resources/triangle-right-with-tail.png"></image>
+      </button>
+      <text class="action-text">{{sendto}}</text>
+    </view>
+  </view>
+  <image class="split" mode="aspectFit" src="../resources/arrow-down.png"></image>
+  <text class="royal">{{royal}}</text>
+  <image class="product-pic" mode="aspectFit" src="../resources/asbo150.png"></image>
+  <text class="product-title">{{product}}</text>
+  <text class="product-size">{{productsize}}</text>
+  <text class="product-desc">{{productdesc}}</text>
+  <button class="btn-get-free" type="default" bindtap="bindToFreeSample">{{getSample}}</button>
+  <image class="company" mode="aspectFit" src="../resources/company1.png"></image>
+  <text class="company-title">
+    {{companytitle1}}
+  </text>
+  <text class="company-desc">
+    {{companydesc1}}
+  </text>
+  <image class="company" mode="aspectFit" src="../resources/company2.png"></image>
+  <text class="company-title">
+    {{companytitle2}}
+  </text>
+  <text class="company-desc">
+    {{companydesc2}}
+  </text>
+  <image class="company" mode="aspectFit" src="../resources/company3.png"></image>
+  <text class="company-title">
+    {{companytitle3}}
+  </text>
+  <text class="company-desc">
+    {{companydesc3}}
+  </text>
+  <image class="company" mode="aspectFit" src="../resources/company4.png"></image>
+  <text class="company-title">
+    {{companytitle4}}
+  </text>
+  <text class="company-desc">
+    {{companydesc4}}
+  </text>
+  <button type="default" class="btn-follow">
+    {{follow}}
+  </button>
+</view>

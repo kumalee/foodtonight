@@ -1,0 +1,36 @@
+<!--game.wxml-->
+<view class="container">
+  <view class="section-header">
+    <image class="asbo150png" mode="aspectFill" src="../resources/asbo150.png"></image>
+    <text class="asbo150-name">
+      {{product}}
+    </text>
+  </view>
+  <view class="section-footer">
+    <form class="form" bindsubmit="formSubmit">
+      <input class="input" bindinput="bindinputName" type="text" name="realname" placeholder="Name" placeholder-class="input-placeholder" />
+      <view class="input" bindtap="showSelector">
+          {{preAddress}}
+      </view>
+      <input class="input" bindinput="bindinputAddress" type="text" name="address" placeholder="Address" placeholder-class="input-placeholder"/>
+      <input class="input" type="number" bindinput="bindinputMobile" name="mobile" placeholder="Mobile" placeholder-class="input-placeholder" />
+      <text class="delivery-desc">{{delivery}}</text>
+      <button class="send" type="default" bindtap="bindToThankyou" form-type="submit">{{submit}}</button>
+    </form>
+    <view class="picker-view-wrapper" style="display:{{showPicker}}">
+      <button type="primary" size="mini" bindtap="bindDone">Done</button>
+      <button type="default" size="mini" bindtap="bindCancel" class="btn-cancel">Cancel</button>
+      <picker-view indicator-style="height: 50px;" class="picker-view" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:key="{{item.id}}" wx:for="{{provinces}}" class="picker-view-column">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:key="{{item.id}}" wx:for="{{citys}}" class="picker-view-column">{{item.name}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:key="{{item.id}}" wx:for="{{areas}}" class="picker-view-column">{{item.name}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

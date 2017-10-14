@@ -1,0 +1,228 @@
+/**game.wxss**/
+.container {
+  background-color: white;
+  width: 100%;
+  height:auto;
+  position: relative;
+}
+
+.mindrelax {
+  font-family: Lato;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 2.8px;
+	text-align: center;
+	color: #404040;
+  margin-top: 62rpx;
+}
+
+.mindfeel {
+  font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 2.2px;
+	text-align: center;
+	color: #808080;
+}
+
+.section-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150rpx;
+  padding-bottom: 50rpx;
+}
+
+.play-again,
+.share {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320rpx;
+  height: 260rpx;
+}
+
+.play-back,
+.share-back {
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0 4rpx 42rpx 32rpx #ceced2, 0 2rpx 8rpx 2rpx rgba(0, 0, 0, 0.39);
+}
+
+.play-back:active,
+.share-back:active {
+  width: 144rpx;
+  height: 144rpx;
+}
+
+.triangle-left,
+.sendto {
+  width: 40rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 54rpx;
+}
+
+.sendto {
+  width: 80rpx;
+  height: 100rpx;
+  top: 30rpx;
+  left: 40rpx;
+}
+
+.play-back:active .triangle-left {
+  width: 36rpx;
+  height: 55rpx;
+  left: 48rpx;
+  top: 48rpx;
+}
+
+.share-back:active .sendto {
+  width: 76rpx;
+  height: 94rpx;
+  top: 24rpx;
+  left: 38rpx;
+}
+
+.action-text {
+  font-family: Lato, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 1.4px;
+	text-align: center;
+	color: #404040;
+  margin-top: 60rpx;
+}
+
+.split {
+  width: 52rpx;
+  height: 28rpx;
+  margin: 80rpx;
+}
+
+.royal {
+  font-family: Lato, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 2.8px;
+	text-align: center;
+	color: #404040;
+  margin-bottom: 40rpx;
+}
+
+.product-pic {
+	width: 222rpx;
+	height: 304rpx;
+}
+
+.product-title {
+  font-family: Lato, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #404040;
+  margin-top: 20rpx;
+}
+
+.product-size {
+  font-family: Lato, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 1.7px;
+	text-align: center;
+	color: #abb4bd;
+  margin-top: 10rpx;
+}
+
+.product-desc {
+  font-family: Lato, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.36;
+	letter-spacing: normal;
+	text-align: center;
+	color: #808080;
+  margin-top: 40rpx;
+  margin-bottom: 76rpx;
+}
+
+.btn-get-free,
+.btn-follow {
+  width: 592rpx;
+	height: 132rpx;
+  line-height: 132rpx;
+	border-radius: 6px;
+	background-color: #000000;
+  font-family: Lato, sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: 3.3px;
+	text-align: center;
+	color: #ffffff;
+  margin-bottom: 80rpx;
+}
+
+.company {
+  width: 100%;
+  height: 400rpx;
+}
+
+.company-title {
+  font-family: Lato, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 2.8px;
+	text-align: center;
+	color: #404040;
+  margin-top: 14rpx;
+  margin-bottom: 10rpx;
+}
+
+.company-desc {
+  font-family: Lato, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.36;
+	letter-spacing: normal;
+	text-align: center;
+	color: #808080;
+  margin-bottom: 64rpx;
+}
+
+.btn-follow {
+  margin-top: 60rpx;
+}

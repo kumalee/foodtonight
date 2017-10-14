@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{nickName}}</text>
+  </view>
+  <view class="arrowup">
+    <image class="arrow-up" mode="aspectFit" src="../resources/arrow-up.png"></image>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">
+      {{userInfo.nickName}} {{desc1}}
+      {{desc2}}
+    </text>
+    <view class="start" bindtap="bindGameStart">
+      <view class="start-back"></view>
+      <image class="start-triangle" mode="aspectFit" src="../resources/triangle-right.png"></image>
+    </view>
+    <image class="logo" mode="aspectFit" src="../resources/logo.png"></image>
+  </view>
+</view>
