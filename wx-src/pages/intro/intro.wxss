@@ -194,6 +194,8 @@
 .company {
   width: 100%;
   height: 400rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
 }
 
 .company-title {

@@ -62,7 +62,7 @@ BODY CARE FROM SPAIN',
       companydesc4: 'In todays high stress, overloaded lives we \n\
         need cosmetics that go beyond just making our \n\
         face and body look good, we need comsetics \n\
-        that make us feel good on the inside. \n\
+        that make us feel good on the inside. \n\n\
         Cosmetics that understand beauty \n\
         is as much a mental state as a physical image. \n\
         Beautiful Mind, Beautiful Body.'
