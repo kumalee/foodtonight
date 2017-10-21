@@ -5,7 +5,10 @@ var util = require('../../utils/util.js');
 var breathing = false;
 var flagPlay;
 Page({
-  data: {},
+  data: {
+    initShow: 'show',
+    ballSrc: '../resources/ball.png'
+  },
   //事件处理函数
   bindToIntro: function() {
     wx.redirectTo({
@@ -39,7 +42,6 @@ Page({
   },
   onLoad: function () {
     const DATA = {
-      initShow: 'show',
       en: {
         title: 'Relax By 3 Breath',
         tip_init: 'OK, let’s take 3 breathe',

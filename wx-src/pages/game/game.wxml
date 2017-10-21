@@ -27,7 +27,7 @@
     id="ball" 
     class="ball {{ballClass}}" 
     mode="aspectFit" 
-    src="../resources/ball.png" 
+    src="{{ballSrc}}"
     style="transform: scale({{ballScale}}); left: {{left}}; top: {{top}}"
     ></image>
     <image class="logo" mode="aspectFit"

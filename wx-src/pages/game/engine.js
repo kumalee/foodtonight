@@ -55,7 +55,7 @@ const SCALE = {
     },
     Cong: {
       from: 1,
-      to: 2.5
+      to: 2.2
     }
 }
 
@@ -214,6 +214,7 @@ const _paint = function(){
         'exhaleShow': '',
         'inhaleScale': 1,
         'exhaleScale': 1,
+        'ballSrc': '../resources/ball.png'
     });
     delayShowPlay = setTimeout(function(){
       me.setData({
@@ -295,7 +296,8 @@ const _paintEaseInOut = function(values, flag, direct){
                     'exhaleShow': '',
                     'initShow': '',
                     'playShow': '',
-                    'waitingShow': ''
+                    'waitingShow': '',
+                    'ballSrc': '../resources/ball-big.png'
                 });
                 if (flagFinished) {
                   clearTimeout(flagFinished);
@@ -411,6 +413,7 @@ const _breathStop = function(){
             'ballClass': '',
             'waitingShow': '',
             'ballScale': 1,
+            'ballSrc': '../resources/ball.png'
         })
         setTimeout(function(){
             if (GLOBAL_DIRECT.indexOf('U')<GLOBAL_DIRECT.indexOf('D')){
