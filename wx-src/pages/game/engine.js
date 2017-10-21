@@ -25,14 +25,14 @@ const SYS_INFO = wx.getSystemInfoSync();
 const RANGE = {
     min_x: -20,
     max_x: 750,
-    min_y: 40,
+    min_y: 80,
     max_y: 1240
 }
 
 const POINTS = {
     BottomToTop: {
         x: (RANGE.max_x + 20 - 300) / 2,
-        y: RANGE.min_y + 20
+        y: RANGE.min_y + 20 + 60
     },
     TopToBottom: {
         x: (RANGE.max_x + 20 - 300) / 2,
@@ -40,7 +40,7 @@ const POINTS = {
     },
     Cong: {
         x: (RANGE.max_x + 20 - 300) / 2,
-        y: RANGE.min_y + 145
+        y: RANGE.min_y + 145 + 60
     }
 }
 
