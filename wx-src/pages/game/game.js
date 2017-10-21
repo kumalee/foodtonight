@@ -39,24 +39,25 @@ Page({
   },
   onLoad: function () {
     const DATA = {
+      initShow: 'show',
       en: {
         title: 'Relax By 3 Breath',
-        tip_play: 'TAP AND HOLD TO START',
-        tip_follow: 'FOLLOW THE CIRCLE',
-        tip_inhale: 'BREATHE IN',
-        tip_exhale: 'BREATHE OUT',
-        tip_waiting: 'HOLD YOUR BREATH',
-        tip_cong: 'YOU DID IT',
+        tip_init: 'OK, let’s take 3 breathe',
+        tip_play: 'Touch and follow me',
+        tip_inhale: 'Nice! now breathe in',
+        tip_exhale: 'Great! breathe out now',
+        tip_waiting: 'Hold your breath…',
+        tip_cong: 'YEAH! YOU DID IT! :D',
         language: 'en'
       },
       cn: {
         title: '三次深呼吸放松',
-        tip_play: '保持长按屏幕来开始',
-        tip_follow: '心随球走',
-        tip_inhale: '吸气',
-        tip_exhale: '呼气',
-        tip_waiting: '保持住你的呼吸',
-        tip_cong: '恭喜你做到了',
+        tip_init: '好了，来做三次深呼吸',
+        tip_play: '长按屏幕跟随我',
+        tip_inhale: '干得漂亮！现在保持吸气',
+        tip_exhale: '太棒了！可以吐气了',
+        tip_waiting: '屏住你的呼吸...',
+        tip_cong: '耶！恭喜你做到了! :D',
         language: 'cn'
       }
     };

@@ -1,32 +1,27 @@
 <!--game.wxml-->
 <view 
     class="container"
-    bindlongtap="longtap"
+    bindlongpress="longtap"
     bindtouchcancel="cancel"
     bindtouchend="end"
 >
-    <text class="tip-play tip-{{language}}" 
-        style="display: {{playShow}}">
-    {{tip_play}}
+    <text class="tip {{initShow}}">
+      {{tip_init}}
     </text>
-    <text class="tip-follow tip-{{language}}" 
-        style="display: {{followShow}}">
-    {{tip_follow}}
+    <text class="tip {{playShow}}">
+      {{tip_play}}
     </text>
-    <text class="tip-inhale" 
-        style="display: {{inhaleShow}}; transform: translateX(-50%) scale({{inhaleScale}});">
-    {{tip_inhale}}
+    <text class="tip {{inhaleShow}}">
+      {{tip_inhale}}
     </text>
-    <text class="tip-exhale" 
-        style="display: {{exhaleShow}}; transform: translateX(-50%) scale({{exhaleScale}})">
-    {{tip_exhale}}
+    <text class="tip {{exhaleShow}}">
+      {{tip_exhale}}
     </text>
-    <text class="tip-waiting tip-{{language}}"
-        style="display: {{waitingShow}};">
-    {{tip_waiting}}
+    <text class="tip {{waitingShow}}">
+      {{tip_waiting}}
     </text>
-    <text class="tip-cong tip-{{language}}" style="display: {{congShow}}">
-    {{tip_cong}}
+    <text class="tip tip-cong {{congShow}}">
+      {{tip_cong}}
     </text>
     <image 
     id="ball" 

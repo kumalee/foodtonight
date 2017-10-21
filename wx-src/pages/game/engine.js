@@ -7,6 +7,8 @@ const BALL = {
     x:  Math.floor(Math.random()*50),
     y: Math.floor(Math.random()*30)
 };
+let delayShowPlay;
+let delayBreatheOut;
 
 const UNIT = {
     x: 6,
@@ -191,20 +193,34 @@ const _getAction = function(){
 }
 
 const _paint = function(){
+  if (delayShowPlay){
+    clearTimeout(delayShowPlay);
+    delayShowPlay = undefined;
+  }
+  if (delayBreatheOut){
+    clearTimeout(delayBreatheOut);
+    delayBreatheOut = undefined;
+  }
     FLAG_STOP = false;
     var me = this;
     me.setData({
         'left': BALL.x + 'rpx',
         'top': BALL.y + 'rpx',
         'ballScale': 1,
-        'playShow': 'flex',
-        'followShow': 'none',
-        'congShow': 'none',
-        'inhaleShow': 'none',
-        'exhaleShow': 'none',
+        'initShow': 'show',
+        'playShow': '',
+        'congShow': '',
+        'inhaleShow': '',
+        'exhaleShow': '',
         'inhaleScale': 1,
-        'exhaleScale': 1,   
+        'exhaleScale': 1,
     });
+    delayShowPlay = setTimeout(function(){
+      me.setData({
+        'initShow': '',
+        'playShow': 'show'
+      })
+    },2500)
     _loopPaint.call(me);
 }
 
@@ -274,10 +290,12 @@ const _paintEaseInOut = function(values, flag, direct){
                 updownCount += 1;
                 FLAG_BREATH = true;
                 me.setData({
-                    'followShow': 'none',
-                    'congShow': 'flex',
-                    'inhaleShow': 'none',
-                    'exhaleShow': 'none'
+                    'congShow': 'show',
+                    'inhaleShow': '',
+                    'exhaleShow': '',
+                    'initShow': '',
+                    'playShow': '',
+                    'waitingShow': ''
                 });
                 if (flagFinished) {
                   clearTimeout(flagFinished);
@@ -288,9 +306,12 @@ const _paintEaseInOut = function(values, flag, direct){
             } else {
                 var tpoint = _getTargetPoint('BottomToTop');
                 me.setData({
-                  'followShow': 'none',
-                  'inhaleShow': 'flex',
-                  'exhaleShow': 'none',
+                  'inhaleShow': 'show',
+                  'exhaleShow': '',
+                  'initShow': '',
+                  'playShow': '',
+                  'congShow': '',
+                  'waitingShow': ''
                 });
                 animate.call(me, tpoint.points, tpoint.scale, updowntime, 'Cubic.easeInOut', _paintEaseInOut, 'TopToBottom');
                 updownCount += 1;
@@ -299,16 +320,19 @@ const _paintEaseInOut = function(values, flag, direct){
             var tpoint = _getTargetPoint('TopToBottom');
             me.setData({
               'ballClass': 'stop',
-              'inhaleShow': 'none',
-              'exhaleShow': 'none',
-              'waitingShow': 'flex',
+              'inhaleShow': '',
+              'exhaleShow': '',
+              'playShow': '',
+              'initShow': '',
+              'waitingShow': 'show',
             });
-            setTimeout(function () {
+            delayBreatheOut = setTimeout(function () {
               me.setData({
                 'ballClass': '',
-                'inhaleShow': 'none',
-                'exhaleShow': 'flex',
-                'waitingShow': 'none',
+                'inhaleShow': '',
+                'exhaleShow': 'show',
+                'playShow': '',
+                'waitingShow': '',
               });
               animate.call(me, tpoint.points, tpoint.scale, updowntime, 'Cubic.easeInOut', _paintEaseInOut, 'BottomToTop');
             }, 3000);
@@ -364,24 +388,28 @@ const _breathStart = function(){
     updownCount = 0;
     me.setData({
         'playShow': 'none',
-        'followShow': 'flex'
+        'followShow': 'block'
     });
     animate.call(me, points, scale, 1000, 'Cubic.easeInOut', _paintEaseInOut, 'BottomToTop');
 }
 
 const _breathStop = function(){
+    if (delayBreatheOut){
+      clearTimeout(delayBreatheOut);
+      delayBreatheOut = undefined;
+    }
     var me = this;
     FLAG_BREATH = true;
     if (updownCount>maxCount){
         return false;
     } else {
         me.setData({
-            'playShow': 'flex',
-            'followShow': 'none',
-            'exhaleShow': 'none',
-            'inhaleShow': 'none',
+            'initShow': 'show',
+            'playShow': '',
+            'exhaleShow': '',
+            'inhaleShow': '',
             'ballClass': '',
-            'waitingShow': 'none',
+            'waitingShow': '',
             'ballScale': 1,
         })
         setTimeout(function(){

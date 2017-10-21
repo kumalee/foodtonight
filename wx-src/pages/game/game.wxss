@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: block;
 }
 
 @-webkit-keyframes rotate360{
@@ -48,52 +49,48 @@
   opacity: 0.15;
 }
 
+@-webkit-keyframes slidedown{
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
+@keyframes slidedown{
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
-.tip-play,
-.tip-follow,
-.tip-inhale,
-.tip-exhale,
-.tip-waiting,
-.tip-cong {
-  position: absolute;
+.tip {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
   font-weight: 100;
-  z-index: 1;
-  display: none;
-  line-height: 1.2;
-  width: auto;
-}
-
-.tip-play.tip-en,
-.tip-play.tip-waiting {
-  min-width: 420rpx;
+  width: 100%;
   text-align: center;
+  font-size: 18px;
+  color: #404040;
+  background: #f9f9f9;
+  position: absolute;
+  padding: 0 0 40rpx 0;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
 }
-.tip-play.tip-cn {
-  text-align: center;
-}
-
-.tip-play,
-.tip-follow,
-.tip-cong,
-.tip-inhale,
-.tip-exhale,
-.tip-waiting {
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.tip.show {
+  -webkit-animation: slidedown 0.7s ease-out;
+  animation: slidedown 0.7s ease-out;
+  transform: translateY(0%);
 }
 
 .tip-cong {
-  z-index: 9999;
-  color: #fff;
-  top: auto;
-  bottom: 70%;
-  margin-left: -20rpx;
-}
-
-.tip-play {
-  display: flex;
+  background: #FEE94E;
 }
