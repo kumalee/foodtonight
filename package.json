@@ -1,0 +1,24 @@
+{
+  "name": "foodtonight",
+  "version": "1.0.0",
+  "description": "no",
+  "main": "test.js",
+  "dependencies": {
+    "md5-file": "^3.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node scripts/start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumalee/foodtonight.git"
+  },
+  "author": "Kuma Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumalee/foodtonight/issues"
+  },
+  "homepage": "https://github.com/kumalee/foodtonight#readme"
+}

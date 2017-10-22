@@ -1,5 +1,7 @@
 const animate = require('../../utils/animate.js').animate;
 const util = require('../../utils/util.js');
+const ballnormal = '../resources/ball.06ad26.png'
+const ballbig = '../resources/ball-big.6f3ace.png'
 let flagFinished;
 const BALL = {
     width: 300,
@@ -214,7 +216,7 @@ const _paint = function(){
         'exhaleShow': '',
         'inhaleScale': 1,
         'exhaleScale': 1,
-        'ballSrc': '../resources/ball.png'
+        'ballSrc': ballnormal
     });
     delayShowPlay = setTimeout(function(){
       me.setData({
@@ -297,7 +299,7 @@ const _paintEaseInOut = function(values, flag, direct){
                     'initShow': '',
                     'playShow': '',
                     'waitingShow': '',
-                    'ballSrc': '../resources/ball-big.png'
+                    'ballSrc': ballbig
                 });
                 if (flagFinished) {
                   clearTimeout(flagFinished);
@@ -413,7 +415,7 @@ const _breathStop = function(){
             'ballClass': '',
             'waitingShow': '',
             'ballScale': 1,
-            'ballSrc': '../resources/ball.png'
+            'ballSrc': ballnormal
         })
         setTimeout(function(){
             if (GLOBAL_DIRECT.indexOf('U')<GLOBAL_DIRECT.indexOf('D')){

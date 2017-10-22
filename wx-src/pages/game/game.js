@@ -7,7 +7,7 @@ var flagPlay;
 Page({
   data: {
     initShow: 'show',
-    ballSrc: '../resources/ball.png'
+    ballSrc: '../resources/ball.06ad26.png'
   },
   //事件处理函数
   bindToIntro: function() {
