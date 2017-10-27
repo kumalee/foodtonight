@@ -27,8 +27,8 @@
 }
 
 .ball {
-  width: 300rpx;
-  height: 264rpx;
+  width: 360rpx;
+  height: 316rpx;
   position: absolute;
   z-index: 999;
 }

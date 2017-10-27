@@ -2,10 +2,11 @@ const animate = require('../../utils/animate.js').animate;
 const util = require('../../utils/util.js');
 const ballnormal = '../resources/ball.06ad26.png'
 const ballbig = '../resources/ball-big.6f3ace.png'
+const ballempty = '../resources/ball-empty.png'
 let flagFinished;
 const BALL = {
-    width: 300,
-    height: 264,
+    width: 360,
+    height: 316,
     x:  Math.floor(Math.random()*50),
     y: Math.floor(Math.random()*30)
 };
@@ -33,15 +34,15 @@ const RANGE = {
 
 const POINTS = {
     BottomToTop: {
-        x: (RANGE.max_x + 20 - 300) / 2,
+        x: (RANGE.max_x + 20 - 360) / 2,
         y: RANGE.min_y + 20 + 60
     },
     TopToBottom: {
-        x: (RANGE.max_x + 20 - 300) / 2,
-        y: RANGE.max_y - 264 + 20
+        x: (RANGE.max_x + 20 - 360) / 2,
+        y: RANGE.max_y - 316 + 20
     },
     Cong: {
-        x: (RANGE.max_x + 20 - 300) / 2,
+        x: (RANGE.max_x + 20 - 360) / 2,
         y: RANGE.min_y + 145 + 60
     }
 }
@@ -392,7 +393,8 @@ const _breathStart = function(){
     updownCount = 0;
     me.setData({
         'playShow': 'none',
-        'followShow': 'block'
+        'followShow': 'block',
+        'ballSrc': ballempty
     });
     animate.call(me, points, scale, 1000, 'Cubic.easeInOut', _paintEaseInOut, 'BottomToTop');
 }
