@@ -26,11 +26,39 @@
   }
 }
 
+@-webkit-keyframes scaleInOut{
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes scaleInOut{
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
 .ball {
   width: 360rpx;
   height: 316rpx;
   position: absolute;
   z-index: 999;
+}
+.ball.scale {
+  -webkit-animation: scaleInOut 1s ease-in-out infinite;
+  animation: scaleInOut 1s ease-in-out infinite;
 }
 
 .ball.stop {

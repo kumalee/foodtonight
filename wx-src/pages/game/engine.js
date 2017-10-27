@@ -146,14 +146,14 @@ const _setMoveOperate = function(){
 
 // set min spped of x,y
 const _setSpeed = function(){
-    UNIT.y = Math.random()*13;
-    UNIT.x = Math.random()*7;
-    if (UNIT.y < 10) {
-        UNIT.y = 10;
-    }
-    if (UNIT.x < 4) {
-        UNIT.x = 4;
-    }
+    UNIT.y = Math.random()*6;
+    UNIT.x = Math.random()*3;
+    // if (UNIT.y < 10) {
+    //     UNIT.y = 10;
+    // }
+    // if (UNIT.x < 4) {
+    //     UNIT.x = 4;
+    // }
 }
 
 // set move direct and unit
@@ -217,6 +217,7 @@ const _paint = function(){
         'exhaleShow': '',
         'inhaleScale': 1,
         'exhaleScale': 1,
+        'ballClass': 'scale',
         'ballSrc': ballnormal
     });
     delayShowPlay = setTimeout(function(){
@@ -394,7 +395,8 @@ const _breathStart = function(){
     me.setData({
         'playShow': 'none',
         'followShow': 'block',
-        'ballSrc': ballempty
+        'ballSrc': ballempty,
+        'ballClass': ''
     });
     animate.call(me, points, scale, 1000, 'Cubic.easeInOut', _paintEaseInOut, 'BottomToTop');
 }
@@ -414,7 +416,7 @@ const _breathStop = function(){
             'playShow': '',
             'exhaleShow': '',
             'inhaleShow': '',
-            'ballClass': '',
+            'ballClass': 'scale',
             'waitingShow': '',
             'ballScale': 1,
             'ballSrc': ballnormal
