@@ -18,54 +18,52 @@ Page({
   },
   onLoad: function () {
     const me = this;
+    const data = wx.getStorageSync('userInfo');
+    let nickName;
+    if (data){
+      nickName = data.nickName.substr(0, data.nickName.length-1);
+    } else {
+      nickName = ''
+    }
     const DATA = {
       en: {
       title: 'Done',
-      mindrelax: 'MIND RELAXED :)\n\
-        WHAT ABOUT YOUR BODY?',
-      mindfeel: 'Now your mind is more\n\
-        relaxed, you deserve to \n\
-        relax your body.',
+      mindfeel: `How are you feeling now, ${nickName}?
+        
+        If you feel better, why not share with
+        your friends? We all know someone
+        who could use some calm.`,
       playagain: 'Play Again',
-      sendto: 'Send to Friend',
-      royal: 'ROYAL RELAXING \n\
-BODY CARE FROM SPAIN',
-      product: 'Anti-Stress Body Oil',
-      productsize: '150 ml',
-      productdesc: 'A sublime body oil with Almond oil combined \n\
-       with the essential oils of Orange, Grapefruit, \n\
-       Lemon, Lavender, Marjoram and Petitgrain. \n\n\n\
-      Its stimulating fragrance provides an \n\
-      immediate sensation of all-over wellbeing. \n\
-      This oil helps relaxation and alleviates \n\
-      tension when applied in massage.',
-      getSample: 'GET FREE SAMPLE',
+      sendto: 'Share',
       follow: 'FOLLOW US',
+      whomadethis: 'WHO MADE THIS? ',
       companytitle1: 'WHO IS ALQVIMIA?',
-      companydesc1:'Today you have discovered a Special Brand.  \n\
-        We are a small and beautiful Concious Cosmetic \n\
-        Company from Sunny Barcelona in Spain. \n\
-        We have spent 30 years refining ancient \n\
-        Alchemical European treatments \n\
-        for the body and mind',
-      companytitle2: '100% NATURAL AND SAFE',
-      companydesc2: 'All our products are chemical free, \n\
-        made only with the best natural ingreedients. \n\
-        Some of those ingredients we even harvest from \n\
-        the wild in the Spanish mountains.',
-      companytitle3: 'ANCIENT WISDOM',
-      companydesc3: 'Our products are inspired by ancient eurpoean \n\
-        Alchemical formuals and principles. \n\
-        Some of them follow very traditional ways \n\
-        of extracting the purest essence from plants.',
-      companytitle4: 'CONCIOUS COSMETICS',
-      companydesc4: 'In todays high stress, overloaded lives we \n\
-        need cosmetics that go beyond just making our \n\
-        face and body look good, we need comsetics \n\
-        that make us feel good on the inside. \n\n\
-        Cosmetics that understand beauty \n\
-        is as much a mental state as a physical image. \n\
-        Beautiful Mind, Beautiful Body.'
+      companydesc1: `A luxury natural cosmetic brand founded
+      in romantic Barcelona, Spain over 30 years
+      ago. We combine aromatherapy and highest
+      quality natural plant and flower essences in
+      unique ancient Alchemical formulas.
+    
+      The results are products that just smell and
+      feel magical.`,
+      companytitle2: 'INTEGRAL BEAUTY',
+      companydesc2: 'Our products go much deeper than your skin, \n\
+      they connect you with your inner light. \n\
+      \n\
+      We empower you to feel your best with \n\
+      products that are completely chemical free, \n\
+      with lasting effective results.',
+      companytitle3: 'NATURAL IS LUXURY',
+      companydesc3: 'After years of investigation we have created \n\
+      Eternal Youth, the fusion of the Alchemy with \n\
+      cosmetics-leading innovations in Anti-Aging \n\
+      ingredients, the ﬁrst 100% natural youth \n\
+      enhancing treatment with maximum \n\
+      regeneration for face, body and mind.',
+      companytitle4: 'LOVED BY STARS',
+      companydesc4: 'Over 30 years many Spanish international stars \n\
+      have grown to love our products. Now we are \n\
+      opening up to China, be the first to know us!'
     },
     cn: {
       title: '完成',
