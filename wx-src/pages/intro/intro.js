@@ -27,7 +27,7 @@ Page({
     }
     const DATA = {
       en: {
-      title: 'Done',
+        title: '3 Breaths',
       mindfeel: `How are you feeling now, ${nickName}?
         
         If you feel better, why not share with

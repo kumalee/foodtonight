@@ -27,7 +27,7 @@ App({
   setLanguage: function(){
     try {
       var sysInfo = wx.getSystemInfoSync();
-        wx.setStorageSync('language', sysInfo.language === 'zh_CN' ? 'en' : 'en');
+        wx.setStorageSync('language', sysInfo.language === 'zh_CN' ? 'cn' : 'en');
     } catch (e) {
     }
   }

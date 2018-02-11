@@ -87,7 +87,7 @@ Page({
       en: {
         desc1: 'Stop stressing out!',
         desc2: 'Have some Feel Good on me :)',
-        title: 'Feel Good For You'
+        title: '3 Breaths'
       },
       cn: {
         desc1: '不要压抑自己',
