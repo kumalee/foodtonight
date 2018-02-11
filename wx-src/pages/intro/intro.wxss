@@ -13,21 +13,25 @@
   height: 30vh;
   width: 100vw;
   background: #292a2c;
+  position: relative;
 }
 
 .arrowup {
   height: 4vh;
+  position: absolute;
+  bottom: -2rpx;
+  width: 100%;
+  text-align: center;
 }
 
 .arrow-up {
-  align-content: flex-end;
   height: 4vh;
 }
 
 .intro-logo {
-  width: 462rpx;
-  height: 410rpx;
-  margin: -30rpx auto -40rpx;
+  width: 436rpx;
+  height: 388rpx;
+  margin-top: -20rpx;
   padding-left: 30rpx;
 }
 
@@ -167,4 +171,5 @@
   background: #efeff4;
   font-size: 12px;
   letter-spacing: 2rpx;
+  color: #404040;
 }

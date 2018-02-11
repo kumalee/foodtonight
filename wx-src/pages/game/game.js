@@ -43,7 +43,7 @@ Page({
   onLoad: function () {
     const DATA = {
       en: {
-        title: '3 Breath',
+        title: '3 Breaths',
         tip_init: 'OK, let’s take 3 breathe',
         tip_play: 'Touch and follow me',
         tip_inhale: 'Nice! now breathe in',
