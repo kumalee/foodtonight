@@ -1,7 +1,9 @@
 <!--game.wxml-->
 <view class="container">
   <view class="intro-header">
-    <image class="intro-logo" src="../resources/logo-intro.png" mode="aspectFit"></image>
+    <image class="back-logo {{logoCls}}" mode="aspectFit" src="../resources/rainbow.png"></image>
+    <image class="intro-logo {{logoCls}}" src="{{avatarUrl}}" mode="aspectFit"></image>
+    <text class="userinfo-nickname">{{nickName}}</text>
     <view class="arrowup">
       <image class="arrow-up" mode="aspectFit" src="../resources/arrow-up.png"></image>
     </view>

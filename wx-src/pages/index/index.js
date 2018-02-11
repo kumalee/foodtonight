@@ -33,8 +33,10 @@ Page({
   },
   //事件处理函数
   bindGameStart: function() {
+    var me = this;
     wx.redirectTo({
-      url: '../game/game'
+      // url: '../game/game'
+      url: '../intro/intro'
     });
   },
   doLogin: function(){
@@ -45,9 +47,9 @@ Page({
       login: true,
       success(userInfo) {
         showSuccess('登录成功');
-        userInfo.data.nickName+=',';
         me.setData({
-          userInfo: userInfo.data
+          userInfo: userInfo.data,
+          comma: ','
         });
         wx.setStorage({
           key:'userInfo', 
@@ -109,6 +111,11 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     })
+    try {
+      wx.setStorageSync('avatarUrl', (e.avartar || '../resources/logo-intro.png'))
+      wx.setStorageSync('nickName', (e.uname || 'Alqvimia'))
+    } catch (e) {
+    }
   },
   onShareAppMessage: function () {
     var me = this;

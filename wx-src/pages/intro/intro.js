@@ -19,16 +19,24 @@ Page({
   onLoad: function () {
     const me = this;
     const data = wx.getStorageSync('userInfo');
-    let nickName;
-    if (data){
-      nickName = data.nickName.substr(0, data.nickName.length-1);
-    } else {
-      nickName = ''
+    const myName = (data && data.nickName) || '';
+    let avatarUrl = '../resource/logo-intro.png';
+    let nickName = 'Alqvimia';
+    try {
+      avatarUrl = wx.getStorageSync('avatarUrl')
+      nickName = wx.getStorageSync('nickName')
+      console.log('sync::', avatarUrl, nickName)
+    } catch (e) {
     }
+    me.setData({
+      avatarUrl: avatarUrl,
+      nickName: nickName,
+      logoCls: nickName === 'Alqvimia' ? 'default' : 'user'
+    })
     const DATA = {
       en: {
         title: '3 Breaths',
-      mindfeel: `How are you feeling now, ${nickName}?
+      mindfeel: `How are you feeling now, ${myName}?
         
         If you feel better, why not share with
         your friends? We all know someone

@@ -9,7 +9,7 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">
-      {{userInfo.nickName}} {{desc1}}
+      {{userInfo.nickName}}{{comma}} {{desc1}}
       {{desc2}}
     </text>
     <view class="start" bindtap="bindGameStart">
