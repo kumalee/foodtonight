@@ -1,9 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/game/game",
     "pages/intro/intro",
-    "pages/getsample/getsample",
-    "pages/typage/typage"
+    "pages/game/game"
   ]
 }

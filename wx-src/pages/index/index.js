@@ -35,8 +35,7 @@ Page({
   bindGameStart: function() {
     var me = this;
     wx.redirectTo({
-      // url: '../game/game'
-      url: '../intro/intro'
+      url: '../game/game'
     });
   },
   doLogin: function(){
@@ -112,7 +111,7 @@ Page({
       withShareTicket: true
     })
     try {
-      wx.setStorageSync('avatarUrl', (e.avartar || '../resources/logo-intro.png'))
+      wx.setStorageSync('avatarUrl', (e.avartar || '../resources/icon-default.png'))
       wx.setStorageSync('nickName', (e.uname || 'Alqvimia'))
     } catch (e) {
     }

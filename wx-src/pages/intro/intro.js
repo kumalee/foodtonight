@@ -20,18 +20,16 @@ Page({
     const me = this;
     const data = wx.getStorageSync('userInfo');
     const myName = (data && data.nickName) || '';
-    let avatarUrl = '../resource/logo-intro.png';
+    let avatarUrl = '../resources/icon-default.png';
     let nickName = 'Alqvimia';
     try {
       avatarUrl = wx.getStorageSync('avatarUrl')
       nickName = wx.getStorageSync('nickName')
-      console.log('sync::', avatarUrl, nickName)
     } catch (e) {
     }
     me.setData({
       avatarUrl: avatarUrl,
-      nickName: nickName,
-      logoCls: nickName === 'Alqvimia' ? 'default' : 'user'
+      nickName: nickName
     })
     const DATA = {
       en: {
