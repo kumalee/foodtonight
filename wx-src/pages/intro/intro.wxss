@@ -101,6 +101,11 @@
 .icon-share {
   width: 80rpx;
   height: 100rpx;
+  margin-left: -10rpx;
+}
+
+.text-share {
+  padding-left: 15rpx;
 }
 
 .action-text {
