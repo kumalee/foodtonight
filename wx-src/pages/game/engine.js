@@ -301,6 +301,7 @@ const _paintEaseInOut = function(values, flag, direct){
                     'initShow': '',
                     'playShow': '',
                     'waitingShow': '',
+                    'ballClass': 'cong',
                     'ballSrc': ballbig
                 });
                 if (flagFinished) {

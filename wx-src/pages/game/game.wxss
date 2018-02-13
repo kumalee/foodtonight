@@ -50,6 +50,24 @@
   }
 }
 
+@-webkit-keyframes fadeIn{
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .ball {
   width: 360rpx;
   height: 316rpx;
@@ -64,6 +82,11 @@
 .ball.stop {
   -webkit-animation: rotate360 3s infinite;
   animation: rotate360 3s infinite;
+}
+
+.ball.cong {
+  -webkit-animation: fadeIn 2.2s ease-in-out;
+  animation: fadeIn 2.2s ease-in-out;
 }
 
 .logo {
